@@ -1,4 +1,4 @@
-<%= form_for @post, :html => { :class => "form-horizontal post" } do |f| %>
+<%= form_for @post, :html => { :class => "form-item" } do |f| %>
 
     <% if @post.errors.any? %>
     <div id="error_expl" class="panel panel-danger">
@@ -36,3 +36,4 @@
             posts_path, :class => 'btn btn-default' %>
 
 <% end %>
+
