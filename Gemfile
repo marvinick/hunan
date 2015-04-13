@@ -28,6 +28,12 @@ gem 'spring',        group: :development
 
 gem 'twitter-bootstrap-rails'
 gem 'devise'
+gem 'simple_form'
+
+group :test do
+  gem 'cucumber'
+  gem 'rspec-expectations'
+end
 
 
 # Use ActiveModel has_secure_password
