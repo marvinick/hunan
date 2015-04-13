@@ -1,38 +1,77 @@
-<%- model_class = Post -%>
-<div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+<div class="jumbotron">
+  <h1 class="text-center">House of Hunan</h1>
 </div>
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:title) %></th>
-      <th><%= model_class.human_attribute_name(:body) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
-      <th><%=t '.actions', :default => t("helpers.actions") %></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= link_to post.id, post_path(post) %></td>
-        <td><%= post.title %></td>
-        <td><%= post.body %></td>
-        <td><%=l post.created_at %></td>
-        <td>
-          <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                      edit_post_path(post), :class => 'btn btn-default btn-xs' %>
-          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-                      post_path(post),
-                      :method => :delete,
-                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-                      :class => 'btn btn-xs btn-danger' %>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<%= link_to t('.new', :default => t("helpers.links.new")),
-            new_post_path,
-            :class => 'btn btn-primary' %>
+    <div class="neighborhood-guides">
+      <div class="container>
+              <div class="row">
+                  <div class="col-md-3">
+                      <div class="thumbnail">
+                        <img src="http://www.dineouthere.com/images/sushi-town-17.jpg">
+                        <p><strong>The Daddy Roll</strong>. It has some fried stuff element to it, you'll like it</p>
+                      </div>
+                    </div>
+                      <div class="col-md-3">
+                      <div class="thumbnail">
+                        <img src="http://www.tulsapeople.com/in%20the%20raw5689.jpg">
+                        <center><p>I think it's a <strong>Candy Roll</strong><p></center>
+                      </div>
+                    </div>
+                   <div class="col-md-3">
+                      <div class="thumbnail">
+                        <img src="http://www.travelandleisure.com/images/amexpub/0034/2887/201212-w-best-sushi-restaurants-roka-akor.jpg">
+                        <p>We even semi-cook our nigiri, just to be safe</p>
+                      </div>
+                  </div>
+                   <div class="col-md-3">
+                      <div class="thumbnail">
+                          <img src="http://cookingontheweekends.com/wp-content/uploads/2012/05/April13-Shrimp-Ceviche31.jpg">
+                          <p>Ceviche on a martini glass, can't get more original than this!</p>
+                      </div>
+                  </div>
+              </div>
+          </h2>
+      </div>
+    </div>
+    <div class="learn-more">
+      <center><h2>Why us?</h2></center><br/>
+    <div class="container">
+     <div class="row">
+        <div class="col-md-4">
+          <div class="thumbnail">
+            <img src="http://i2.ytimg.com/vi/f0j3-nd3kJo/hqdefault.jpg">
+          </div>
+          <h3>Executive Chef</h3>
+          <p>Leo Bandana? The Big Kahuna? Magic Leo?</p>
+          <p><a href="#">See him works out</a></p>
+        </div>
+        <div class="col-md-4">
+          <div class="thumbnail">
+            <img src="http://www.tulsagrit.com/images/full-780/in-the-raw-food-truck.jpg">
+          </div>
+          <h3>Multiple locations</h3>
+          <p>It's a food truck! Our location changes everyday. </p>
+          <p><a href="#">Learn more</a></p>
+        </div>
+        <div class="col-md-4">
+          <div class="thumbnail">
+            <img src="http://a4.urbancdn.com/w/s/Su/M3DInxMUimhaQ0-640m.jpg">
+          </div>
+        </div>
+        <div class="col-md-4">
+          <h3>Trust our brand</h3>
+          <p>It's essentially In the Raw without tipping your server :) Unless you really want to </p>
+          <p><a href="#">Learn more</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr/>
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <center><p>built by &#0153;Seasalt Labs</p></center>
+        </div>
+      </div>
+    </div>
+  </footer>
