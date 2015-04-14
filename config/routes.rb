@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :members
   resources :users
-
+  resources :searches
   resources :posts
   root to: "posts#index"
 

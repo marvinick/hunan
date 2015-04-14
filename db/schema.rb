@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150413001922) do
+ActiveRecord::Schema.define(version: 20150414044803) do
 
   create_table "members", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -34,6 +34,15 @@ ActiveRecord::Schema.define(version: 20150413001922) do
   create_table "posts", force: true do |t|
     t.string   "title"
     t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "searches", force: true do |t|
+    t.string   "keywords"
+    t.string   "categories"
+    t.decimal  "min_price"
+    t.decimal  "max_price"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
