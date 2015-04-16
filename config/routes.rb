@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :menus
+
   devise_for :members
   resources :users
   resources :searches
