@@ -15,6 +15,7 @@ gem 'spring',        group: :development
 gem 'twitter-bootstrap-rails'
 gem 'devise'
 gem 'simple_form'
+gem 'paperclip'
 
 group :test do
   gem 'cucumber'
