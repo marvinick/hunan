@@ -17,16 +17,22 @@
 
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Menu<span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Info<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="#"></a></li>
             <li><%= link_to "Dinner" %></li>
-            <li><a href="#">Specials</a></li>
+            <li><%= link_to "Sign In", new_member_session_path %></a></li>
             <li class="divider"></li>
             <li><a href="#">Appetizers</a></li>
           </ul>
         </li>
-        <li><%= link_to "Sign In", new_member_session_path %></a></li>
+        <li><%= link_to "Appetizers" %></li>
+        <li><%= link_to "Specials" %></li>
+        <li><%= link_to "Chickens" %></li>
+        <li><%= link_to "Soups" %></li>
+        <li><%= link_to "Sweet & Sour" %></li>
+        <li><%= link_to "Pork" %></li>
+        <li><%= link_to "Seafood" %></li>
+        <li><%= link_to "Vegetables" %></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
