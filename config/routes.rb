@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  resources :chickens
+
+  resources :appetizers
+
+  resources :soups
+
+  resources :specials
+
   resources :menus
 
   devise_for :members

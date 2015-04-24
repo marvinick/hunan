@@ -1,0 +1,29 @@
+<h1>Listing soups</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Size</th>
+      <th>Price</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @soups.each do |soup| %>
+      <tr>
+        <td><%= soup.name %></td>
+        <td><%= soup.size %></td>
+        <td><%= soup.price %></td>
+        <td><%= link_to 'Show', soup %></td>
+        <td><%= link_to 'Edit', edit_soup_path(soup) %></td>
+        <td><%= link_to 'Destroy', soup, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Soup', new_soup_path %>

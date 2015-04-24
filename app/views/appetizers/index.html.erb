@@ -1,0 +1,29 @@
+<h1>Listing appetizers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @appetizers.each do |appetizer| %>
+      <tr>
+        <td><%= appetizer.name %></td>
+        <td><%= appetizer.price %></td>
+        <td><%= appetizer.description %></td>
+        <td><%= link_to 'Show', appetizer %></td>
+        <td><%= link_to 'Edit', edit_appetizer_path(appetizer) %></td>
+        <td><%= link_to 'Destroy', appetizer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Appetizer', new_appetizer_path %>
