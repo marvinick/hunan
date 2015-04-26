@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @veggy.name %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @veggy.price %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @veggy.description %>
+</p>
+
+<%= link_to 'Edit', edit_veggy_path(@veggy) %> |
+<%= link_to 'Back', veggies_path %>
